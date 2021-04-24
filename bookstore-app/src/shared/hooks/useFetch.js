@@ -15,6 +15,8 @@ export default function useFetch(api, method, body = null) {
   const fetchURL = async () => {
     let response;
     if (method === 'GET') {
+        
+
       response = await service.getBooks(0, 20); // hardcode
     }
     if (method === 'POST') {

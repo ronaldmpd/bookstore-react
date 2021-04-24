@@ -18,12 +18,12 @@ const BookItem = ({ book }) => {
 
   return (
     <Card>
-      <CardImg src={urlImage || 'https://picsum.photos/200/300'} alt={book.title} height="200px" width="200px" />
+      <CardImg src={urlImage || 'https://picsum.photos/200/300'} alt={book.title} height="300px" />
       <CardBody>
         <CardTitle>
           {book.title} {' '}
         </CardTitle>
-        <CardSubtitle>{book.description}</CardSubtitle>
+        <CardSubtitle>{book.description} - {book.price} Bs.</CardSubtitle>
       </CardBody>
     </Card>
   );

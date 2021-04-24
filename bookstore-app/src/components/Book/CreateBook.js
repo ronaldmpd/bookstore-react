@@ -32,7 +32,7 @@ const CreateBook = () => {
 
   const handleOnSubmit = async (e) => {
     e.preventDefault();
-    const response = await BookService.addUser(book, selectedImage);
+    const response = await BookService.addBook(book, selectedImage);
     // eslint-disable-next-line no-console
     console.log(response);
     cleanBook();
