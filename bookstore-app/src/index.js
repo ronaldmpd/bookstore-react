@@ -1,18 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-// import { Provider } from 'react-redux';
+import { Provider } from 'react-redux';
 
 import AppRoutes from './routes';
-//import configureStore from './shared/redux/configureStore';
+import configureStore from './shared/redux/configureStore';
 import reportWebVitals from './reportWebVitals';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
-// import ThemeContext from './context/ThemeContext';
+//import ThemeContext from './context/ThemeContext';
 
 const rootElement = document.getElementById('root');
-//const store = configureStore(window.initialState);
+const store = configureStore(window.initialState);
 // const themes = {
 //   theme: 'dark',
 // };
@@ -20,11 +20,11 @@ const rootElement = document.getElementById('root');
 const renderApp = (Component) => {
   ReactDOM.render(
     <React.StrictMode>
-      {/* <Provider store={store}> */}
+      <Provider store={store}>
         <Router>
           <Component />
         </Router>
-      {/* </Provider> */}
+      </Provider>
     </React.StrictMode>,
     rootElement
   );

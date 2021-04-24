@@ -1,0 +1,30 @@
+{
+  "posts": [
+    {
+      "id": "asd123",
+      "description": "Hola Mundo 1",
+      "author": "Christian"
+    },
+    {
+      "id": "asd1232",
+      "description": "Hola Mundo 2",
+      "author": "Christian"
+    },
+    {
+      "id": "asd456",
+      "description": "Hola Mundo 3",
+      "author": "Christian"
+    },
+    {
+      "id": "asd7568",
+      "description": "Hola Mundo 4",
+      "author": "Christian"
+    },
+    {
+      "id": "asd0789",
+      "description": "Hola Mundo 5",
+      "author": "Christian"
+    }
+  ]
+  
+}

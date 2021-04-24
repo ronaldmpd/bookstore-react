@@ -15,6 +15,7 @@ import Error404 from './components/Error/404';
 // import User from './components/User/User';
 // import CreateUser from './components/CreateUser/CreateUser';
 import Book from './components/Book/Book';
+import CreateBook from './components/Book/CreateBook';
 import Author from './components/Author/Author';
 
 
@@ -23,6 +24,7 @@ const AppRoutes = () => (
     <Switch>
       <Route path="/" component={Book} exact />
       <Route path="/books" component={Book} exact />
+      <Route path="/books/create" component={CreateBook} exact />
       <Route path="/authors" component={Author} exact />
       {/* <Route path="/pomodoro" component={Pomodoro} exact />
       <Route path="/numbers" component={Numbers} exact />
