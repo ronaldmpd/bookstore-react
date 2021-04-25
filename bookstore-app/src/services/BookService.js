@@ -17,6 +17,16 @@ const getBooks = async (from = 0, limit = itemsPerPage) => {
   return response;
 };
 
+const getBookById = async (id) => {
+  const queryParams = `/${id}`; // /1
+  const response = await API.get(`${URL_BOOKS}${queryParams}`); // /books ===> /books/1
+  console.log("BookSevcies - getBookById: ",response);
+  if (!response) {
+    throw new Error(response);
+  }
+  return response;
+};
+
 const uploadImage = async (image, name) => {
   const storageRef = storage.ref();
   const usersRef = storageRef.child(`images/${name}`);
@@ -48,4 +58,5 @@ export default {
   getBooks,
   addBook,
   getURLImage,
+  getBookById,
 };
