@@ -9,24 +9,11 @@
 
 // export default Book;
 
-// import { useState, useEffect } from 'react';
-// import UserService from '../../services/UserService';
 import useFetch from '../../shared/hooks/useFetch';
 import BookItem from './BookItem';
 
 const Book = () => {
-  const [bookList, loading] = useFetch('Book', 'GET');
-  // const [userList, setUserList] = useState([]);
-  // const [loading, setLoading] = useState(false);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const response = await UserService.getUsers();
-  //     setUserList(response.data.rows);
-  //     setLoading(false);
-  //   };
-  //   fetchData();
-  // }, [loading]);
+const [bookList, loading] = useFetch('Book', 'GET'); 
 
   return (
     <div className="Book">

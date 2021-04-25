@@ -23,7 +23,7 @@ const BookItem = ({ book }) => {
         <CardTitle>
           {book.title} {' '}
         </CardTitle>
-        <CardSubtitle>{book.description} - {book.price} Bs.</CardSubtitle>
+        <CardSubtitle>Author: {book.author.name} - {book.description} - {book.price} Bs. - </CardSubtitle>
       </CardBody>
     </Card>
   );
