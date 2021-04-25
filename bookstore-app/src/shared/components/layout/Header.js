@@ -26,7 +26,7 @@ const Header = () => {
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem href="/books" >
-                  Lists Books
+                  Books
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem href="/books/create">
@@ -34,27 +34,39 @@ const Header = () => {
                 </DropdownItem>                              
               </DropdownMenu>
             </UncontrolledDropdown>
-            <NavItem>
-              <NavLink href="/authors">Authors</NavLink>
-            </NavItem>
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                Authors
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem href="/authors" >
+                  Authors
+                </DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem href="/authors/create">
+                  Create Author
+                </DropdownItem>                              
+              </DropdownMenu>
+            </UncontrolledDropdown>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Clients
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem href="/clients" >
-                  Lists Clients
+                  Clients
                 </DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem>
+                <DropdownItem href="/clients/create">
                   Create Client
                 </DropdownItem>                              
               </DropdownMenu>
             </UncontrolledDropdown>
-          </Nav>
-          <NavItem>
+            <NavItem>
               <NavLink href="/">Carrito</NavLink>
             </NavItem>
+          </Nav>
+         
         </Collapse>
       </Navbar>
     </header>
