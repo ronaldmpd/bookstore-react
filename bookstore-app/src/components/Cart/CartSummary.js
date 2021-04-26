@@ -7,14 +7,14 @@ import { useHistory } from 'react-router-dom';
 import useFetchDetailBook from '../../shared/hooks/useFetchDetailBook';
 
 
-const BookDetail = () => {
+const CartSummary = () => {
   const history = useHistory();
   const { id } = useParams();
   const [book, loading] = useFetchDetailBook(id, 'GET'); 
 
   return (
-    <div className="BookDetail">
-      <h1>Detail of Book</h1>
+    <div className="CartSummary">
+      <h1>Order Summary</h1>
       {loading ? (
         <div>Loading</div>
       ) : (
@@ -26,7 +26,9 @@ const BookDetail = () => {
         Title: {book.title}
         </CardTitle>
         <CardSubtitle>Author: {book.author.name} - {book.description} - {book.price} Bs. - </CardSubtitle>        
-        <CardLink href={`/cart/ordersummary/${book.id}`}>Buy Now</CardLink>
+        <CardSubtitle>Sub Total: {book.price} Bs. - </CardSubtitle>
+        <CardSubtitle>Order Total: {book.price} Bs. - </CardSubtitle>        
+        <CardLink href={`/cart/buynowbook/${book.id}`}>Continue Buy</CardLink>
       </CardBody>
     </Card>
         </div>
@@ -35,4 +37,4 @@ const BookDetail = () => {
   );
 };
 
-export default BookDetail;
+export default CartSummary;

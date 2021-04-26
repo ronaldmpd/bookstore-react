@@ -12,6 +12,7 @@ import Client from './components/Client/Client';
 import CreateClient from './components/Client/CreateClient';
 
 import BuyNowBook from './components/Cart/BuyNowBook';
+import CartSummary from './components/Cart/CartSummary';
 
 
 const AppRoutes = () => (
@@ -21,6 +22,7 @@ const AppRoutes = () => (
       <Route path="/books" component={Book} exact />
       <Route path="/books/create" component={CreateBook} exact />
       <Route path="/books/:id" component={BookDetail} exact />
+      <Route path="/cart/ordersummary/:id" component={CartSummary} exact />
       <Route path="/cart/buynowbook/:id" component={BuyNowBook} exact />
       <Route path="/authors" component={Author} exact />
       <Route path="/authors/create" component={CreateAuthor} exact />
