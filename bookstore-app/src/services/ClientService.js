@@ -13,7 +13,7 @@ const getClients = async (from = 0, limit = itemsPerPage) => {
   return response;
 };
 
-const addClient = async (client) => {  
+const addClient = async (client) => {
   const response = await API.post(`${URL_CLIENTS}`, client);
   if (response.error) {
     throw new Error('No se ha podido crear el author');
@@ -23,5 +23,5 @@ const addClient = async (client) => {
 
 export default {
   getClients,
-  addClient,  
+  addClient,
 };

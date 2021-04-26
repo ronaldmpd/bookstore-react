@@ -1,3 +1,4 @@
+/* eslint-disable*/
 import { useState, useEffect } from 'react';
 import BookService from '../../services/BookService';
 import AuthorService from '../../services/AuthorService';
@@ -16,24 +17,25 @@ export default function useFetch(api, method, body = null) {
   const fetchURL = async () => {
     let response;
     if (method === 'GET') {
-      let authors = await AuthorService.getAuthors(0, 20);
-      let authorById = {};
-      for(let i in authors.data.authors){
-        let author = authors.data.authors[i];        
+      const authors = await AuthorService.getAuthors(0, 20);
+      const authorById = {};
+      for (const i in authors.data.authors) {
+        const author = authors.data.authors[i];
         authorById[author.id] = author;
-      }    
-      let books = await service.getBooks(0, 20); // hardcode
-      let dataResponse = {};
-      dataResponse.data ={};
+      }
+      const books = await service.getBooks(0, 20); // hardcode
+      const dataResponse = {};
+      dataResponse.data = {};
       dataResponse.data.count = books.count;
-      let booksWithAuthor = [];
-      for(let i in books.data.books){
-        let book = books.data.books[i];
-        book.author = authorById[book.authorId];        
+      const booksWithAuthor = [];
+      
+      for (const i in books.data.books) {
+        const book = books.data.books[i];
+        book.author = authorById[book.authorId];
         booksWithAuthor.push(book);
       }
       dataResponse.data.books = booksWithAuthor;
-      console.log(">>>>> book with author: ", dataResponse);      
+      console.log(">>>>> book with author: ", dataResponse);
       response = dataResponse;
     }
     if (method === 'POST') {

@@ -1,20 +1,10 @@
-// const Author = () => {
-
-//     return (
-//       <div className="Author">
-//         <h1>List of Authors</h1>     
-//       </div>
-//     );
-// };
-
-// export default Author;
 import useFetchAuthor from '../../shared/hooks/useFetchAuthor';
 import AuthorItem from './AuthorItem';
 
 const Author = () => {
-const [authorList, loading] = useFetchAuthor('Author', 'GET'); 
+  const [authorList, loading] = useFetchAuthor('Author', 'GET');
 
-console.log("clientList", authorList);
+  console.log('clientList', authorList);
 
   return (
     <div className="Author">
@@ -23,7 +13,7 @@ console.log("clientList", authorList);
         <div>Loading</div>
       ) : (
         <div className="">
-          {authorList.authors.map((item) => (                        
+          {authorList.authors.map((item) => (
             // eslint-disable-next-line no-underscore-dangle
             <AuthorItem key={item._id} author={item} />
           ))}

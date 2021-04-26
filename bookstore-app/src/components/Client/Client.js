@@ -2,9 +2,9 @@ import useFetchClient from '../../shared/hooks/useFetchClient';
 import ClientItem from './ClientItem';
 
 const Client = () => {
-const [clientList, loading] = useFetchClient('Client', 'GET'); 
+  const [clientList, loading] = useFetchClient('Client', 'GET');
 
-console.log("clientList", clientList);
+  console.log("clientList", clientList);
 
   return (
     <div className="Client">
@@ -13,7 +13,7 @@ console.log("clientList", clientList);
         <div>Loading</div>
       ) : (
         <div className="">
-          {clientList.clients.map((item) => (                        
+          {clientList.clients.map((item) => (
             // eslint-disable-next-line no-underscore-dangle
             <ClientItem key={item._id} client={item} />
           ))}

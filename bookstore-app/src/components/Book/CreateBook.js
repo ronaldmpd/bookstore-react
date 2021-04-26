@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Form, FormGroup, Input, Label, Button } from 'reactstrap';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { v4 as uuidv4 } from 'uuid';
 
 import BookService from '../../services/BookService';
@@ -87,7 +88,6 @@ const CreateBook = () => {
             value={book.authorId}
           />
         </FormGroup>
-        
         <FileUploader
           onFileSelectError={({ error }) => console.log(error)}
           onFileSelectSuccess={(file) => handleOnFileSubmit(file)}

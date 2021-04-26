@@ -14,7 +14,7 @@ const CreateAuthor = () => {
       [e.target.name]: e.target.value,
     });
   };
-  
+
   const cleanAuthor = () => {
     setAuthor({ name: '', age: null, nationality: '' });
   };
@@ -42,7 +42,7 @@ const CreateAuthor = () => {
             onChange={handleOnChange}
             value={author.name}
           />
-        </FormGroup>    
+        </FormGroup>
         <FormGroup>
           <Label for="age">age</Label>
           <Input
@@ -64,7 +64,7 @@ const CreateAuthor = () => {
             onChange={handleOnChange}
             value={author.nationality}
           />
-        </FormGroup>                         
+        </FormGroup>
         <Button>Submit</Button>
       </Form>
     </div>

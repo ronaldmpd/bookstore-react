@@ -23,7 +23,7 @@ const getAuthorById = async (id) => {
   return response;
 };
 
-const addAuthor = async (author) => {  
+const addAuthor = async (author) => {
   const response = await API.post(`${URL_AUTHORS}`, author);
   if (response.error) {
     throw new Error('No se ha podido crear el author');
@@ -34,5 +34,5 @@ const addAuthor = async (author) => {
 export default {
   getAuthors,
   getAuthorById,
-  addAuthor,  
+  addAuthor,
 };

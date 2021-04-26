@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
-//import ThemeContext from './context/ThemeContext';
+// import ThemeContext from './context/ThemeContext';
 
 const rootElement = document.getElementById('root');
 const store = configureStore(window.initialState);

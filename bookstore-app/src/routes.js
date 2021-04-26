@@ -14,7 +14,6 @@ import CreateClient from './components/Client/CreateClient';
 import BuyNowBook from './components/Cart/BuyNowBook';
 import CartSummary from './components/Cart/CartSummary';
 
-
 const AppRoutes = () => (
   <App>
     <Switch>

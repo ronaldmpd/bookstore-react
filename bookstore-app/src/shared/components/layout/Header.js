@@ -1,6 +1,18 @@
 import { useState } from 'react';
 
-import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavLink, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import {
+  Collapse,
+  Nav,
+  Navbar,
+  NavbarBrand,
+  NavbarToggler,
+  NavLink,
+  NavItem,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from 'reactstrap';
 // import ThemeContext from '../../../context/ThemeContext';
 
 const Header = () => {
@@ -19,19 +31,15 @@ const Header = () => {
           <Nav className="mr-auto" navbar>
             <NavItem>
               <NavLink href="/">Home</NavLink>
-            </NavItem>            
+            </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Books
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem href="/books" >
-                  Books
-                </DropdownItem>
+                <DropdownItem href="/books">Books</DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem href="/books/create">
-                  Create Book
-                </DropdownItem>                              
+                <DropdownItem href="/books/create">Create Book</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
             <UncontrolledDropdown nav inNavbar>
@@ -39,13 +47,9 @@ const Header = () => {
                 Authors
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem href="/authors" >
-                  Authors
-                </DropdownItem>
+                <DropdownItem href="/authors">Authors</DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem href="/authors/create">
-                  Create Author
-                </DropdownItem>                              
+                <DropdownItem href="/authors/create">Create Author</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
             <UncontrolledDropdown nav inNavbar>
@@ -53,20 +57,15 @@ const Header = () => {
                 Clients
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem href="/clients" >
-                  Clients
-                </DropdownItem>
+                <DropdownItem href="/clients">Clients</DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem href="/clients/create">
-                  Create Client
-                </DropdownItem>                              
+                <DropdownItem href="/clients/create">Create Client</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
               <NavLink href="/">Carrito</NavLink>
             </NavItem>
           </Nav>
-         
         </Collapse>
       </Navbar>
     </header>

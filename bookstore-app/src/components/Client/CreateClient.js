@@ -14,7 +14,7 @@ const CreateClient = () => {
       [e.target.name]: e.target.value,
     });
   };
-  
+
   const cleanClient = () => {
     setBook({ name: '', nit: null, state: true });
   };
@@ -42,7 +42,7 @@ const CreateClient = () => {
             onChange={handleOnChange}
             value={client.name}
           />
-        </FormGroup>    
+        </FormGroup>
         <FormGroup>
           <Label for="nit">nit</Label>
           <Input
@@ -53,7 +53,7 @@ const CreateClient = () => {
             onChange={handleOnChange}
             value={client.nit}
           />
-        </FormGroup>                        
+        </FormGroup>
         <Button>Submit</Button>
       </Form>
     </div>

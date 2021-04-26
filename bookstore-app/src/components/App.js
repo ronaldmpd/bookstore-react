@@ -1,4 +1,3 @@
-
 import { element } from 'prop-types';
 import Header from '../shared/components/layout/Header';
 import Content from '../shared/components/layout/Content';
@@ -9,7 +8,7 @@ import './App.css';
 function App(props) {
   return (
     <div className="App">
-      <Header />      
+      <Header />
       <Content>{props.children}</Content>
       <Footer />
     </div>

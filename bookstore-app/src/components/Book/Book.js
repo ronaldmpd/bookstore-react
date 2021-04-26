@@ -2,7 +2,7 @@ import useFetch from '../../shared/hooks/useFetch';
 import BookItem from './BookItem';
 
 const Book = () => {
-const [bookList, loading] = useFetch('Book', 'GET'); 
+  const [bookList, loading] = useFetch('Book', 'GET');
 
   return (
     <div className="Book">

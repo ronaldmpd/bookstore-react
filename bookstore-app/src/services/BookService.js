@@ -6,11 +6,10 @@ import 'firebase/storage';
 const URL_BOOKS = '/books';
 const storage = firebase.storage();
 
-
 const getBooks = async (from = 0, limit = itemsPerPage) => {
   const queryParams = `?from=${from}&limit=${limit}`; // ?from=0&limit=5
   const response = await API.get(`${URL_BOOKS}${queryParams}`); // /posts ===> /posts?from=0&limit=5
-  console.log("BookSevcies - getBooks",response);
+  console.log("BookSevcies - getBooks", response);
   if (!response) {
     throw new Error(response);
   }
@@ -20,7 +19,7 @@ const getBooks = async (from = 0, limit = itemsPerPage) => {
 const getBookById = async (id) => {
   const queryParams = `/${id}`; // /1
   const response = await API.get(`${URL_BOOKS}${queryParams}`); // /books ===> /books/1
-  console.log("BookSevcies - getBookById: ",response);
+  console.log("BookSevcies - getBookById: ", response);
   if (!response) {
     throw new Error(response);
   }

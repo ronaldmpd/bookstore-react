@@ -4,7 +4,7 @@ import { Card, CardBody, CardImg, CardSubtitle, CardTitle } from 'reactstrap';
 const ClientItem = ({ client }) => {
   return (
     <Card>
-      <CardImg src={'https://picsum.photos/200/300'} alt={client.name} height="300px" />
+      <CardImg src="https://picsum.photos/200/300" alt={client.name} height="300px" />
       <CardBody>
         <CardTitle>
           {client.name}
