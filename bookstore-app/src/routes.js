@@ -11,6 +11,8 @@ import CreateAuthor from './components/Author/CreateAuthor';
 import Client from './components/Client/Client';
 import CreateClient from './components/Client/CreateClient';
 
+import BuyNowBook from './components/Cart/BuyNowBook';
+
 
 const AppRoutes = () => (
   <App>
@@ -19,6 +21,7 @@ const AppRoutes = () => (
       <Route path="/books" component={Book} exact />
       <Route path="/books/create" component={CreateBook} exact />
       <Route path="/books/:id" component={BookDetail} exact />
+      <Route path="/cart/buynowbook/:id" component={BuyNowBook} exact />
       <Route path="/authors" component={Author} exact />
       <Route path="/authors/create" component={CreateAuthor} exact />
       <Route path="/clients" component={Client} exact />
