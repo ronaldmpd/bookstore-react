@@ -20,7 +20,7 @@ const BookDetail = () => {
       ) : (
         <div className="">
          <Card >
-      <CardImg  src={'https://picsum.photos/200/300'} alt={book.title} height="300px" />
+      <CardImg  src={book.img || 'https://picsum.photos/200/300'} alt={book.title} height="300px" />
       <CardBody>
         <CardTitle>
         Title: {book.title}
