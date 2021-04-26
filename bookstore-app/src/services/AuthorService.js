@@ -13,6 +13,16 @@ const getAuthors = async (from = 0, limit = itemsPerPage) => {
   return response;
 };
 
+const getAuthorById = async (id) => {
+  const queryParams = `/${id}`; // ?from=0&limit=5
+  const response = await API.get(`${URL_AUTHORS}${queryParams}`); // /posts ===> /posts?from=0&limit=5
+  console.log("AuthorSevcies - getAuthor:", response);
+  if (!response) {
+    throw new Error(response);
+  }
+  return response;
+};
+
 const addAuthor = async (author) => {  
   const response = await API.post(`${URL_AUTHORS}`, author);
   if (response.error) {
@@ -23,5 +33,6 @@ const addAuthor = async (author) => {
 
 export default {
   getAuthors,
+  getAuthorById,
   addAuthor,  
 };
